@@ -14,7 +14,7 @@ function collectValues() {
     });
 
     if (allInputs.includes('')) {
-        //   alert('theek se dekh')
+        //   alert('')
     } else {
 
 

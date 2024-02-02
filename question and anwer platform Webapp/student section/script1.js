@@ -7,8 +7,8 @@ const button = document.getElementById('submitButton');
 const scoreNumber = document.getElementById('Score');
 const kitneQuestion = document.getElementById('question-number-input');
 
-const sahiuttar = [];
-const galatuttar = [];
+const sahiuttar = [];        // this can be used to preview the correct option of each question
+const galatuttar = [];       // these value will show the wrong options which are selected
 
 var index = 0;
 var score = 0;
@@ -62,14 +62,14 @@ function checkOption(correctoption) {
     if (correctoption == sahioption) {
         // console.log('ye sahi ahi option', sahioption);
         sahiuttar.push(sahioption)
-        console.log('sahi uttar', sahiuttar);
+        // console.log('sahi uttar', sahiuttar);
         
         score++; 
         scoreNumber.textContent = `Score:${score}`;
     } else {
         // console.log('galat option chuni', correctoption);
         galatuttar.push(correctoption);
-        console.log('galat uttar', galatuttar);
+        // console.log('galat uttar', galatuttar);
         scoreNumber.textContent = `Score:${score}`;
         
     }
@@ -81,7 +81,7 @@ function checkOption(correctoption) {
 function startingTest() {
     const howMuchQuestion = document.getElementById('question-number-input').value;
     if (howMuchQuestion == null || howMuchQuestion == 0) {
-        alert('kuch bhar le be');
+        alert('Please provide a valid number of question');
     } else if (howMuchQuestion <= 30) {
         document.getElementById("start-option").style.display = "none";
         document.querySelectorAll("#myForm")[0].style.display = "block";
@@ -91,6 +91,6 @@ function startingTest() {
         // Call localStorageValues to start displaying questions
         // localStorageVales();
     } else {
-        alert('abe aukat me reh le bee');
+        alert('Please provide a proper value of question number');
     }
 }

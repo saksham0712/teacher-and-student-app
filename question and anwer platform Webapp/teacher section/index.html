@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestApp Teacher Section</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-box">
+            <div class="buttons">
+                <div class="button1">For Teacher</div>
+                <div class="button2" onclick="location.href='/student section/index2.html'">For Students</div>
+                
+            </div>
+            <h2 style="margin: 40px; text-align: center;">Welcome teachers you can now add questions as much as you want!</h2>
+            <form id="myForm" action="">
+                
+                <form>
+                    <div class="mb-3">
+                        <label for="question-input" class="form-label">Question</label>
+                        <input type="text" class="form-control" name="question-input" id="question" aria-describedby="question" required>
+                        <div class="uppperOptions">
+
+                            <div class="mb-3">
+                                <label for="option1" class="form-label">option1</label>
+                                <input type="text" class="form-control" name="option1" id="option1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="option1" class="form-label">option2</label>
+                                <input type="text" class="form-control" name="option2" id="option2" aria-describedby="emailHelp" required>
+
+                            </div>
+                        </div>
+                        <div class="lowerOptions">
+
+                            <div class="mb-3">
+                                <label for="option3" class="form-label">option3</label>
+                                <input type="text" class="form-control" name="option3" id="option3" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="option4" class="form-label">option4</label>
+                                <input type="text" class="form-control" name="option4" id="option4" required>
+                            </div>
+                        </div>
+                            <div class="mb-3">
+                                <label for="correctoption" class="form-label">Currect option</label>
+                                <input type="text" class="form-control" name="correctoption" id="correctoption" required>
+                            </div>
+
+                        <div class="btn btn-primary" type="submit" onclick="collectValues()">Submit</div>
+                </form>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
